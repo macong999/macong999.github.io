@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>常用的快捷键</title>
+      <link href="/2020/05/20/chang-yong-de-kuai-jie-jian/"/>
+      <url>/2020/05/20/chang-yong-de-kuai-jie-jian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><h3 id="常用的组合键"><a href="#常用的组合键" class="headerlink" title="常用的组合键"></a>常用的组合键</h3><p>​        复制    <code>ctrl + c</code><br>​        粘贴    <code>ctrl + v</code><br>​        剪切    <code>ctrl + x</code><br>​        保存    <code>ctrl + s</code><br>​        撤销    <code>ctrl + z</code><br>​        重做    <code>ctrl + y</code><br>​        全选：<code>ctrl + a</code><br>​        查找：<code>ctrl + f</code></p><p>​        回到行首：<code>home</code>键<br>​        回到行尾：<code>end</code>键</p><p>​        当光标在行尾，选中一行<br>​        <code>shift + home</code>键</p><p>​        当光标在行首，选中一行<br>​        <code>shift + end</code>键</p><p>​        回到文件头：<code>ctrl + home</code><br>​        回到文件尾：<code>ctrl + end</code></p><p>​        选中一个单词：鼠标双击<br>​        选中一行：鼠标连续击3次</p><p>​        不用鼠标选中一个单词：<code>ctrl + shift</code> + 右箭头/左箭头</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 开发基础 </tag>
+            
+            <tag> 快捷键 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用DOS命令</title>
+      <link href="/2020/05/19/chang-yong-dos-ming-ling/"/>
+      <url>/2020/05/19/chang-yong-dos-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h2 id="常用的DOS命令"><a href="#常用的DOS命令" class="headerlink" title="常用的DOS命令"></a>常用的<code>DOS</code>命令</h2><h3 id="什么是DOS命令？"><a href="#什么是DOS命令？" class="headerlink" title="什么是DOS命令？"></a>什么是<code>DOS</code>命令？</h3><p>​        在<code>DOS</code>命令窗口中才可以输入并执行<code>DOS</code>命令。<br>​        在最初的<code>windows</code>计算机中没有图形界面的，只有<code>DOS</code>命令窗口。<br>​        也就是说通过执行<code>DOS</code>命令窗口可以完全完成文件的新建、编辑、保存、删除<br>​        等一系列操作。</p><h3 id="打开DOS命令窗口的方法"><a href="#打开DOS命令窗口的方法" class="headerlink" title="打开DOS命令窗口的方法"></a>打开<code>DOS</code>命令窗口的方法</h3><p>​        1.<code>win</code>键 + <code>r</code> （组合键）：可以打开“运行”窗口<br>​            在运行窗口文本框中输入: <code>cmd</code><br>​            然后回车</p><p>​        2.也可以直接在制定文件夹的地址栏中输入<code>cmd</code>，回车打开</p><h3 id="DOS命令默认打开位置"><a href="#DOS命令默认打开位置" class="headerlink" title="DOS命令默认打开位置"></a><code>DOS</code>命令默认打开位置</h3><p>​        <code>C:\Users\Administrator</code>这是默认的当前路径</p><h3 id="在DOS命令窗口中如何复制内容"><a href="#在DOS命令窗口中如何复制内容" class="headerlink" title="在DOS命令窗口中如何复制内容"></a>在<code>DOS</code>命令窗口中如何复制内容</h3><p>​        <code>win7</code>:任意位置点击右键–&gt;标记–&gt;选中要复制的内容–&gt;点击右键–&gt;此时就到剪贴板里面了<br>​        <code>win10</code>：左键直接选中，然后右键单击一下就到剪贴板里面了。</p><h3 id="新建目录mkdir"><a href="#新建目录mkdir" class="headerlink" title="新建目录mkdir"></a>新建目录<code>mkdir</code></h3><p>​        <code>mkdir abc  (make directory)</code><br>​        创建一个目录，起名<code>abc</code></p><h3 id="切换盘符"><a href="#切换盘符" class="headerlink" title="切换盘符"></a>切换盘符</h3><p>​        直接输入盘符：<br>​                <code>c</code>: 回车<br>​                <code>d</code>: 回车<br>​                <code>e</code>: 回车<br>​                <code>f</code>: 回车<br>​        当切换到D盘根下了，那么当前路径就是：D:&gt;<br>​        当前路径是当前所在的位置。</p><h3 id="切换目录cd"><a href="#切换目录cd" class="headerlink" title="切换目录cd"></a>切换目录<code>cd</code></h3><p>​        <code>cd：change directory</code>(改变目录)</p><h4 id="cd命令用法"><a href="#cd命令用法" class="headerlink" title="cd命令用法"></a>cd命令用法</h4><p>​        <code>cd</code> 路径      路径在<code>windows</code>系统上包括：相对路径和绝对路径。</p><h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>​        一定要注意，从路径形式上来看，相对路径是一定不会以盘符开始的。<br>​        相对路径：相对路径一定是相对于当前所在“位置”而言的。<br>​        相对路径是相对于当前而言，从当前所在的位置作为起点。</p><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>​        在windows操作系统中凡是路径起点是盘符的都是绝对路径，例如：</p><pre><code>C:\UsersC:\Users\Public\gakatakaC:\Windows\System32D:\BaiduNetdiskDownloadD:\course\OneNote </code></pre><p>​        注意：<br>​        <code>cd ..</code>回到上级路径。<br>​        <code>cd \</code>直接回到根路径。<br>​        <code>.</code>一个点，代表当前路径。</p><h3 id="清屏-cls"><a href="#清屏-cls" class="headerlink" title="清屏 cls"></a>清屏 <code>cls</code></h3><h3 id="查看当前目录下有啥东西-dir"><a href="#查看当前目录下有啥东西-dir" class="headerlink" title="查看当前目录下有啥东西 dir"></a>查看当前目录下有啥东西 <code>dir</code></h3><h3 id="退出DOS命令窗口exit"><a href="#退出DOS命令窗口exit" class="headerlink" title="退出DOS命令窗口exit"></a>退出DOS命令窗口<code>exit</code></h3><h3 id="删除命令-del"><a href="#删除命令-del" class="headerlink" title="删除命令 del"></a>删除命令 <code>del</code></h3><p>​        <code>del</code>命令，删除一个或者多个文件<br>​        删除<code>T1.class</code>文件:<br>​        <code>C:\Users\Administrator&gt;del T1.class</code><br>​        删除所有<code>.class</code>结尾的文件，支持模糊匹配:<br>​        <code>C:\Users\Administrator&gt;del *.class</code></p><p>​        <code>T1.class</code><br>​        <code>T1.glass</code><br>​        <code>del *ass</code> 这个命令就会将<code>T1.class</code>和<code>T1.glass</code>都删除。<br>​        删除的一定是能匹配上的。<br>​        <code>del *.class</code>这个命令中的那个<code>.</code>不要特殊化，这个<code>.</code>其实就是一个普通的字母</p><h3 id="查看本机的IP地址"><a href="#查看本机的IP地址" class="headerlink" title="查看本机的IP地址"></a>查看本机的<code>IP</code>地址</h3><h4 id="什么是IP地址？有什么用呢？"><a href="#什么是IP地址？有什么用呢？" class="headerlink" title="什么是IP地址？有什么用呢？"></a>什么是<code>IP</code>地址？有什么用呢？</h4><p>​        <code>A</code>计算机在网络当中要想定位到（连接到）<code>B</code>计算机，那么必须要先<br>​        知道B计算机的<code>IP</code>地址，<code>IP</code>地址也可以看做计算机在同一个网络当中的<br>​        身份证号（唯一标识）。<br>​        <code>IP</code>地址就相当于电话号码是一个意思。<br>​        <code>ipconfig</code>（<code>ip</code>地址的配置信息。）</p><p>​        <code>ipconfig /all</code>该命令后面添加一个<code>/all</code>参数可以查看更详细的网络信息。<br>​        这个详细信息中包括网卡 的物理地址，例如：<code>70-8B-CD-A7-BA-25</code><br>​        这个物理地址具有全球唯一性。物理地址通常叫做<code>MAC</code>地址。</p><h3 id="如何查看两台计算机是否可以正常通信"><a href="#如何查看两台计算机是否可以正常通信" class="headerlink" title="如何查看两台计算机是否可以正常通信"></a>如何查看两台计算机是否可以正常通信</h3><p>​        <code>ping</code>命令<br>​        语法格式：<br>​                <code>ping IP</code>地址<br>​                <code>ping</code>域名<br>​        </p><pre><code>    ping www.baidu.com    ping 61.135.169.121  （61.135.169.121是百度的IP地址）    ping 61.135.169.121 -t （-t参数表示一直ping）    一直ping的目的可以查看网络是否稳定。</code></pre><p>​        在一个<code>DOS</code>命令窗口中如果有一个命令一直在执行，想强行终止怎么办？<br>​        <code>ctrl + c</code>组合键<br>​<br>​        <code>http://www.baidu.com</code>可以打开百度（这种方式比较方便，域名更容易记忆。）<br>​        <code>http://61.135.169.121</code>也可以打开百度</p><p>​        域名底层最终还是会被解析成<code>IP</code>地址的形式。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DOS命令 </tag>
+            
+            <tag> 开发基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java学习笔记</title>
+      <link href="/2020/05/19/java-xue-xi-bi-ji/"/>
+      <url>/2020/05/19/java-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 后端 </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>不蒜子和live2d看板娘冲突问题</title>
       <link href="/2020/05/19/bu-suan-zi-he-live2d-kan-ban-niang-chong-tu-wen-ti/"/>
       <url>/2020/05/19/bu-suan-zi-he-live2d-kan-ban-niang-chong-tu-wen-ti/</url>
@@ -12,8 +95,6 @@
       
       
       <categories>
-          
-          <category> 前端 </category>
           
           <category> 解决方案 </category>
           
@@ -24,9 +105,7 @@
             
             <tag> hexo </tag>
             
-            <tag> 博客 </tag>
-            
-            <tag> 前端 </tag>
+            <tag> 博客 - 前端 </tag>
             
         </tags>
       
