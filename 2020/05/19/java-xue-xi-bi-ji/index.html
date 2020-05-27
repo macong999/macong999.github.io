@@ -517,21 +517,21 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-20
+                    2020-05-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    94
+                    9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    33 分
                 </div>
                 
 
@@ -546,7 +546,634 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><p>持续更新……</p>
+                <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="计算机编程语言发展史"><a href="#计算机编程语言发展史" class="headerlink" title="计算机编程语言发展史"></a>计算机编程语言发展史</h2><h3 id="第一代语言：机器语言"><a href="#第一代语言：机器语言" class="headerlink" title="第一代语言：机器语言"></a>第一代语言：机器语言</h3><p>　　程序员直接编写二进制,一串二进制代码，例如：<code>10010100010010001000....</code><br>　　计算机是由电流驱动的，电流只能表示两种状态：正、负。<br>　　而正可以对应1，负可以对应0.<br>　　<code>10010010101010...</code>这些二进制码正好和自然世界中的十进制存在转换关系。<br>　　所以很巧妙的是：计算机可以模拟现实世界当中的事物。</p>
+<p>　　机器语言时期非常具有代表性的就是：<strong>打孔机</strong></p>
+<p><strong>缺点：</strong></p>
+<p>　　纸带不容易保存<br>　　另外打孔的时候是人为操作的，孔有可能打错了,孔打错了纸带就废了。</p>
+<h3 id="第二代语言：低级语言"><a href="#第二代语言：低级语言" class="headerlink" title="第二代语言：低级语言"></a>第二代语言：低级语言</h3><p>　　非常具有代表性的：<strong>汇编语言</strong><br>　　汇编语言比机器语言更接近人类自然语言。<br>　　但是汇编语言还是需要专业人士进行开发，一般人拿到汇编语言也读不懂。</p>
+<h3 id="第三代语言：高级语言"><a href="#第三代语言：高级语言" class="headerlink" title="第三代语言：高级语言"></a>第三代语言：高级语言</h3><p>　　高级语言完全接近人类自然语言，具有代表性的：<br>            　C语言：面向过程的<br>        　    C++语言：一半面向过程，一半面向对象<br>            　Java语言：完全面向对象（java语言底层实际上是C++实现的。）<br>            　Python语言：面向对象<br>        　    ….</p>
+<h3 id="计算机编程语言是什么？"><a href="#计算机编程语言是什么？" class="headerlink" title="计算机编程语言是什么？"></a>计算机编程语言是什么？</h3><p>　　是一个团队，或者一个组织制定的一套固定的语法规则，你可以学习这套语法规则，然后通过这套语法规则和计算机交互。</p>
+<h2 id="Java语言的概述"><a href="#Java语言的概述" class="headerlink" title="Java语言的概述"></a>Java语言的概述</h2><p>　JDK（Java开发工具箱，做Java开发必须安装的，这是最根本的一个环境。）<br>　JDK不是集成开发环境。<br>　JDK这个开发工具箱中是Java最核心的库。</p>
+<p>　98年的时候：Java升级到JDK1.2，Java被分为三大块：<br>　　　J2SE：标准版（基础，要学java，必须先学习SE。基础语法+基础库）<br>　　　J2EE：企业版（专门为企业开发软件，为企业提供解决方案。例如：OA办公系统，保险行业的系统，金融行业的系统，医院系统….）<br>　　　J2ME：微型版（专门为微型设备做嵌入式开发的。）<br>　　　java诞生十周年改了名字：<br>　　　　　JavaSE<br>　　　　　JavaEE<br>　　　　　JavaME</p>
+<h2 id="Java语言的特性"><a href="#Java语言的特性" class="headerlink" title="Java语言的特性"></a>Java语言的特性</h2><h3 id="简单性"><a href="#简单性" class="headerlink" title="简单性"></a>简单性</h3><p>　　在Java语言当中真正操作内存的是：JVM（Java虚拟机）<br>        　所有的java程序都是运行在Java虚拟机当中的。<br>        　而Java虚拟机执行过程中再去操作内存。<br>        　对于C或者C++来说程序员都是可以直接通过指针操作内存的。<br>        　C或者C++更灵活，可以直接程序员操作内存，但是要求程序员技术精湛。<br>        　C语言或者C++更有驾驭感。</p>
+<p>　　Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存。这种方式有优点也有缺点：<br>            <strong>优点：</strong>不容易导致内存泄漏。（简单了。）<br>            <strong>缺点：</strong>效率问题，包括驾驭感比较差。　　</p>
+<p>　　Java语言底层是C++，所以JVM是用C++语言写好的一个虚拟的电脑。<br>    　安装了JDK之后，JVM就代表安装好了。</p>
+<h3 id="内存是什么？"><a href="#内存是什么？" class="headerlink" title="内存是什么？"></a>内存是什么？</h3><pre><code>对于计算机来说：最主要的几个部件
+CPU：
+　　　中央处理器，相当于人类的大脑，负责发送并执行指令，是整个计算机的指挥官。
+            CPU是负责计算的，负责运算的。
+            10 + 20 = 30
+            CPU负责将30这个结果计算出来。
+            但是在计算过程中有三个数据需要临时找个空间存储一下：
+            这三个数据分别是：10 20 30
+内存：
+     程序运行过程当中的临时数据存储空间。
+     断电之后或者关机之后内存中的数据就消失了。
+硬盘：
+　　　持久化设备，硬盘上的数据不会因断电而丢失。
+主板：
+　　　相当于人类的躯干，是一个载体：
+            CPU、内存条、硬盘等主要的部件都是放在主板上的，
+            主板上有很多线，将以上的部件链接起来。</code></pre><h3 id="java完全面向对象的"><a href="#java完全面向对象的" class="headerlink" title="java完全面向对象的"></a>java完全面向对象的</h3><p>　　面向对象更容易让人理解，人类通常是以对象的方式认知世界的。<br>　　采用面向对象的方式可以让复杂问题简单化。</p>
+<h3 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h3><p>　　主要是因为Java中有一种机制：<br>　　　　自动垃圾回收机制（GC机制）<br>　　java语言是健壮的，相对于C语言来说，C语言没有Java健壮<br>　　Java不容易导致内存的泄漏<br>　　C++或者C语言使用不当时很容易导致内存泄漏<br>　　JVM负责调度GC机制。程序员不需要干涉</p>
+<p>　　JVM：C++语言写的一个虚拟的计算机</p>
+<p>　　GC：垃圾回收机制</p>
+<h3 id="java完全-完美支持多线程并发"><a href="#java完全-完美支持多线程并发" class="headerlink" title="java完全/完美支持多线程并发"></a>java完全/完美支持多线程并发</h3><h3 id="可移植性-跨平台"><a href="#可移植性-跨平台" class="headerlink" title="可移植性/跨平台"></a>可移植性/跨平台</h3><p>　java语言只要编写一次，可以做到到处运行<br>　　　例如：java程序编写完之后，可以运行在windows操作系统上，不需要做任何改动可以直接运行在Linux操作系统上，同样也可以运行到MaC OS上面。<br>　　　一次编写，到处运行。（平台改变了，程序不需要改。）</p>
+<p>　JVM这种机制实现了跨平台，那么这种机制优点和缺点分别是什么？<br>　　　<strong>优点：</strong>一次编写到处运行，可以跨平台。<br>　　　<strong>缺点：</strong>麻烦。对于运行java程序来说必须先有一个JVM,就像你要想在网页上看视频，你必须先安装一个flash是一样的。</p>
+<h2 id="Java体系三大块"><a href="#Java体系三大块" class="headerlink" title="Java体系三大块"></a>Java体系三大块</h2><p>　　JavaSE：标准版<br>        JavaEE：企业版<br>        JavaME：微型版</p>
+<p>安装JDK之后：<br>        JDK：java开发工具箱<br>        JRE：Java运行环境<br>        JVM：Java虚拟机</p>
+<p>　Java程序从编译到运行经历了两个阶段：</p>
+<p>　　<strong>编译阶段</strong></p>
+<p>　　<strong>运行阶段</strong></p>
+<p><strong>注意</strong>：</p>
+<p>　java程序员直接编写的java代码（普通文本）是无法执行被JVM<br>    识别的。java程序员编写的java代码这种普通文本必须经过一个编译，<br>    将这个“普通文本代码”变成“字节码”，JVM能够识别“字节码”。<br>    java代码这种普通文本变成字节码的过程，被称为：<strong>编译</strong>。</p>
+<p>　java代码这种普通文本被称为：<code>java源代码</code>。（你编写的代码是源代码）<br>　源代码不能直接执行，需要先进行编译，生成源代码对应的“字节码”<br>　JVM可以识别的是字节码。</p>
+<p>　放源代码的文件扩展名必须是：<code>xxx.java</code></p>
+<p>　编译生成的字节码文件扩展名是：<code>xxx.class</code></p>
+<p><strong>.java文件就是源文件，这个文件中编写源代码。</strong><br><strong>.class文件就是字节码文件，这个文件是编译源代码而得到的。</strong></p>
+<p><strong>问题</strong>：字节码文件是二进制文件吗？<br>        字节码文件不是二进制文件。<br>        如果是二进制的话，就不需要JVM了。<br>        因为操作系统可以直接执行二进制。</p>
+<h2 id="对Java的加载与执行的理解"><a href="#对Java的加载与执行的理解" class="headerlink" title="对Java的加载与执行的理解"></a>对Java的加载与执行的理解</h2><p>java程序从开发到最终运行的过程：</p>
+<p>​    <strong>编译期：</strong>（可以在windows上）<br>​        第一步：在硬盘的某个位置（随意），新建一个xxx.java文件<br>​        第二步：使用记事本或者其它文本编辑器打开xxx.java文件<br>​        第三步：在xxx.java文件中编写“符合java语法规则的”源代码。<br>​        第四步：保存（一定要将xxx.java文件保存一下）<br>​        第五步：使用编译器（javac【JDK安装后自带】）对xxx.java文件进行编译。</p>
+<p>​        第六步：如果xxx.java文件中编写的源代码是符合语法规则的，编译会通过，<br>​        如果xxx.java文件中编写的源代码违背了语法规则，那么编译器会报错，编译器<br>​        报错之后class文件是不会生成的，只有编译通过了才会生成class字节码文件。<br>​        并且一个java源文件是可以生成多个class文件的。（编译实质上是检查语法）</p>
+<p>​    <strong>运行期（JRE在起作用）：</strong>（可以在windows上，也可以在其他的OS上。）<br>​        第七步：如果是在Linux上运行，需要将windows上生成的class文件拷贝过去<br>​        不需要拷贝源代码，真正运行的是字节码。（但是源代码也不要删除，有用）</p>
+<p>​        第八步：使用JDK自带的一个命令/工具：java（负责运行的命令/工具）执行字节码</p>
+<p>​        第九步：往下的步骤就全部交给JVM了，就不需要程序员干涉了。<br>​        JVM会将字节码文件装载进去，然后JVM对字节码进行解释（解释器负责将字节码<br>​        解释为1010101010..等的二进制）</p>
+<p>​        第十步：JVM会将生成的二进制码交给OS操作系统，操作系统会执行二进制码和<br>​        硬件进行交互。</p>
+<p>注意：在以上的过程中，需要使用两个非常重要的命令？</p>
+<p>　<strong>javac 命令，负责编译</strong><br>    <strong>java 命令，负责运行</strong></p>
+<p><strong>注意：</strong><br>    xxx.java源文件经过编译之后生成了A.class、B.class、C.class等文件，<br>    那么我们称A是一个类、B是一个类、C是一个类。其中A、B、C是类的名字。<br>    A/B/C是类的名称：A类、B类、C类。</p>
+<p>源文件中编写的代码叫做：<code>源代码</code></p>
+<p>以上是一个复杂的过程，那么缩减一下，程序员到底要干啥？<br>    新建java文件<br>    打开java文件<br>    写java源代码<br>    保存<br>    javac命令编译<br>    java命令运行</p>
+<p>​    <strong>编写、编译、运行</strong></p>
+<h2 id="编写HelloWorld"><a href="#编写HelloWorld" class="headerlink" title="编写HelloWorld"></a>编写HelloWorld</h2><h3 id="第一步：安装文本编辑器"><a href="#第一步：安装文本编辑器" class="headerlink" title="第一步：安装文本编辑器"></a>第一步：安装文本编辑器</h3><h3 id="第二步：安装JDK（先下载JDK）"><a href="#第二步：安装JDK（先下载JDK）" class="headerlink" title="第二步：安装JDK（先下载JDK）"></a>第二步：安装JDK（先下载JDK）</h3><p>​    安装JDK，直接下一步</p>
+<p>​    <strong>注意：</strong><br>​        JDK8安装的时候，不仅JDK内置了一个JRE，而且还会在JDK目录之外<br>​        独立的生成一个单独的JRE。（以前低版本的时候，JRE实际上是有2个。）<br>​        一个是JDK内置的，一个是独立于JDK之外的。<br>​<br>​    JDK的bin目录下有：<br>​    </p>
+<p>​        javac.exe 负责编译<br>​        java.exe 负责运行</p>
+<h3 id="第三步：写代码"><a href="#第三步：写代码" class="headerlink" title="第三步：写代码"></a>第三步：写代码</h3><p>​    写一下第一个程序HelloWorld</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 这是一个类，类名叫做HelloWorld</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>​    括号：[]、()、{}都要成对写。</p>
+<h3 id="第四步：编译"><a href="#第四步：编译" class="headerlink" title="第四步：编译"></a>第四步：编译</h3><h3 id="第五步：运行"><a href="#第五步：运行" class="headerlink" title="第五步：运行"></a>第五步：运行</h3><p>程序写完之后，一定要<code>ctrl + s</code> 进行保存<br><strong>需要注意的是：java源代码只要修改，必须重新编译，重新编译生成新的class字节码文件。</strong></p>
+<hr>
+<h3 id="编译阶段详解："><a href="#编译阶段详解：" class="headerlink" title="编译阶段详解："></a>编译阶段详解：</h3><p>javac命令：<br>​            javac 　java源文件的路径<br>​        java源文件：<br>​            java源文件的名字以“.java”结尾，该文件中写了java源代码。<br>​        java源文件的路径：<br>​            注意：路径永远包括<strong>绝对路径</strong>和<strong>相对路径</strong>。<br>​<br>​        注意：把java源文件直接拖进到DOS命令窗口，那么DOS命令窗口就有这个路径了。<br>​<br>​    </p>
+<pre><code>    C:\Users\Administrator&gt;javac D:\course\JavaProjects\02-JavaSE\chapter01\HelloWorld.java
+​        D:\&gt;javac course\JavaProjects\02-JavaSE\chapter01\HelloWorld.java
+​        D:\course\JavaProjects&gt;javac 02-JavaSE\chapter01\HelloWorld.java
+​        D:\course\JavaProjects\02-JavaSE\chapter01&gt;javac HelloWorld.java</code></pre><p>​        以上的四种方式都行，第一种方式是绝对路径<br>​        剩下三种方式都是相对路径。</p>
+<p>​        <strong>注意：</strong><br>​            怎么在DOS命令窗口中快速定位到某个路径呢？<br>​            打开计算机–&gt;打开一些文件夹–&gt;在地址栏上直接输入cmd回车，这样直接就过去了。<br>​        </p>
+<h3 id="运行阶段详解："><a href="#运行阶段详解：" class="headerlink" title="运行阶段详解："></a>运行阶段详解：</h3><p>​    运行的前提是：class文件（字节码）生成了。没有字节码文件程序是无法运行的。<br>​        假设该文件的名字叫做：<code>HelloWorld.class</code><br>​        那么<code>HelloWorld</code> 就是一个类名。</p>
+<p>​    如果文件名是<code>Test.class</code>，那么：<code>Test</code>就是一个类名。</p>
+<p>怎么运行，使用哪个命令？<br>    使用JDK的bin目录下的：<code>java.exe</code>命令来运行。</p>
+<p><strong>先在DOS命令窗口中测试java.exe这个命令是否可用</strong><br>    <code>java -version</code></p>
+<p>“<code>java.exe</code>“这个命令怎么用，语法格式<br>    java 类名</p>
+<p>java HelloWorld.class 对不对？<br>    <strong>不对！！！！</strong><br>正确的写法是：<br>    <strong>java HelloWorld</strong></p>
+<p><strong>注意</strong>：java这个命令，后面跟的是“类名”，而绝对不能跟“文件路径”，<br>因为java命令后面跟的不是文件，是一个“类名”。</p>
+<p>​    对于这个字节：Test.class    ，应该：java Test<br>​    对于这个字节码：A.class ，应该 java A<br>​    对于这个字节码：Hello.class，应该java Hello<br>​    …..</p>
+<p>​    运行java程序需要哪些步骤呢？</p>
+<p>​        第一步：<br>​            先使用cd命令切换到Test.class文件所在的路径。</p>
+<p>​        第二步：执行java Test</p>
+<p>​        切记：<br>​            java命令后面只能跟类名。</p>
+<h3 id="“java-HelloWorld”的执行过程以及原理"><a href="#“java-HelloWorld”的执行过程以及原理" class="headerlink" title="“java HelloWorld”的执行过程以及原理"></a>“java HelloWorld”的执行过程以及原理</h3><p>D:\course\JavaProjects\02-JavaSE\chapter01&gt;java HelloWorld<br>敲完回车，都发生了什么？</p>
+<ul>
+<li><p>第一步：会先启动JVM（java虚拟机）</p>
+</li>
+<li><p>第二步：JVM启动之后，JVM会去启动“类加载器classloader”<br>​    类加载器的作用：加载类的。</p>
+<p>本质上类加载器负责去硬盘上找“类”对应的“字节码”文件：<br>​    假设是“java HelloWorld”，那么类加载器会去硬盘上搜索：HelloWorld.class文件。<br>​    假设是“java Test”，那么类加载器会去硬盘上搜索：Test.class文件。<br>​    …….</p>
+</li>
+<li><p>​    第三步：检查<br>​        类加载器如果在硬盘上找不到对应的字节码文件，会报错：<br>​            　错误: 找不到或无法加载主类<br>​        类加载器如果在硬盘上找到了对应的字节码文件，类加载器会将该字节码<br>​        文件装载到<code>JVM</code>当中，<code>JVM</code>启动“解释器”将字节码解释为“101010000…”这种<br>​        二进制码，操作系统执行二进制码和硬件交互。<br>​        </p>
+<p>​        <strong>注意：默认情况下类加载器（classloader）会从当前路径下寻找“字节码”文件。</strong>    </p>
+</li>
+</ul>
+<p>  <strong>问题：</strong></p>
+<p>  能不能给类加载器指定一个路径，让类加载器去指定的路径下加载字节码文件。<br>  答案：可以的。但是我们需要设置一个环境变量，叫做：classpath</p>
+<p>　　classpath是一个环境变量是给“类加载器”指路的。</p>
+<p>　　classpath环境变量不属于windows操作系统，classpath环境变量隶属于java。</p>
+<p>　　classpath环境变量是java特有的。<br>　    classpath=A路径;B路径;C路径…..<br>　    classpath是一个变量名<br>    　A路径;B路径;C路径…..是变量值</p>
+<p>我们把classpath配置一下，这个环境变量在windows中没有，需要新建：<br>    <strong>计算机–&gt;右键–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;新建…</strong></p>
+<p>注意：变量名不能随意写：大小写无所谓，但必须叫做：<code>classpath</code><br>    CLASSPATH<br>    ClassPath<br>    Classpath<br>    classpath<br>    都可以</p>
+<p>　我目前是随意配置的：（重启CMD）<br>    classpath=D:\course<br>    <strong>非常重要：</strong><br>        配置了classpath=D:\course之后，类加载器只会去D:\course目录下找“xxx.class”文件<br>        不再从当前路径下找了。</p>
+<h3 id="入门程序代码详解"><a href="#入门程序代码详解" class="headerlink" title="入门程序代码详解"></a>入门程序代码详解</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+    1、在java中任何有效的代码必须写到“类体”当中，最外层必须是一个类的定义。
+    2、public表示公开的，class表示定义一个类，Test是一个类名。类名后面必须是
+    一对大括号，这一对大括号被称为“类体”
+    3、大括号必须是成对的。并且建议都要成对编写，这样才不会丢掉。
+        {}
+        []
+        ()
+    4、什么时候代码缩进？
+        我包着你，你就比我低一级。你就需要缩进。
+        没有合理的缩进，代码可读性很差。
+        或者也可以这样所，大括号里的都需要缩进。
+        缩进就是可读性问题，不缩进也不影响程序的编译和执行。
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 声明/定义一个公开的类，起个名字叫Test</span>
+    <span class="token comment" spellcheck="true">// 类体</span>
+
+    <span class="token comment" spellcheck="true">// 整个这一块的代码被称为：main方法（程序的入口，SUN公司java语言规定的）</span>
+    <span class="token comment" spellcheck="true">// 也就是说：JVM在执行程序的时候，会主动去找这样一个方法。没有这个规格的方法，程序是无法执行的。</span>
+    <span class="token comment" spellcheck="true">// main方法也可以叫做主方法。</span>
+    <span class="token comment" spellcheck="true">// 注意：方法必须放到“类体”中，不能放到“类体”外面。</span>
+    <span class="token comment" spellcheck="true">// 任何一个程序都要有一个入口，没有入口进不来，无法执行。</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//这是一个入口方法。</span>
+
+        <span class="token comment" spellcheck="true">// 方法体</span>
+        <span class="token comment" spellcheck="true">// 注意：方法体由一行一行的“java语句”构成</span>
+        <span class="token comment" spellcheck="true">// 并且非常重要的是：任何一条java语句必须以“;”结尾，并且这个分号还得是英文的，不能用中文分号。</span>
+        <span class="token comment" spellcheck="true">// ";" 代表一条语句的结束。</span>
+        <span class="token comment" spellcheck="true">// 非常非常重要的是：方法体中的代码遵循自上而下的顺序依次逐行执行。</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Test1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// System.out.println();这行代码的作用是向控制台输出一句话。就是这个作用。</span>
+        <span class="token comment" spellcheck="true">// 注意：如果println后面小括号里的内容是一个“字符串”的话，必须使用英文双引号括起来。</span>
+        <span class="token comment" spellcheck="true">// 双引号也要成对儿写。</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Test2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 能再来一个一模一样的入口吗？</span>
+    <span class="token comment" spellcheck="true">// 不行，有语法错误</span>
+    <span class="token comment" spellcheck="true">/*
+    public static void main(String[] args){
+    }
+    */</span>
+    <span class="token comment" spellcheck="true">// 方法2</span>
+    <span class="token comment" spellcheck="true">// 现在不执行不代表以后不执行，以后我们可以学习其它语法让他执行。</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main2</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hehe"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 方法3</span>
+    <span class="token comment" spellcheck="true">// 方法4</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="print-ln"><a href="#print-ln" class="headerlink" title="print(ln)"></a>print(ln)</h3><pre class=" language-java"><code class="language-java">　　　　　<span class="token comment" spellcheck="true">// 这个不加双引号行吗？</span>
+        <span class="token comment" spellcheck="true">// 可以，因为它是数字。</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 是数字，加双引号行吗？</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"100"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 以上性质一样吗？</span>
+        <span class="token comment" spellcheck="true">// 不一样：一个是字符串，一个是数字。</span>
+        <span class="token comment" spellcheck="true">// 但最终输出到控制台上一个样子，没啥区别。</span>
+
+        <span class="token comment" spellcheck="true">// 这里扩展一下：对于数字来说能进行加减乘除吗？</span>
+        <span class="token comment" spellcheck="true">// + 能用吗？</span>
+        <span class="token comment" spellcheck="true">// - 能用吗？</span>
+        <span class="token comment" spellcheck="true">// / 能用吗？</span>
+        <span class="token comment" spellcheck="true">// * 能用吗？</span>
+        <span class="token comment" spellcheck="true">// 可以</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">+</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 300</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">200</span> <span class="token operator">-</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 100</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">200</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 20000</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">200</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span></code></pre>
+<h3 id="重要结论"><a href="#重要结论" class="headerlink" title="重要结论"></a>重要结论</h3><p>第一个结论？</p>
+<ol>
+<li>一个java源文件中可以定义多个class。</li>
+<li>public的类不是必须的。可以没有。</li>
+<li>在源文件中只要有一个class的定义，那么必然会对应生成一个class文件。</li>
+<li>public的类可以没有，但如果有的话，public修饰的类名必须和源文件名保持一致。</li>
+<li>public的类有也只能有1个。</li>
+</ol>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 单行注释</span>
+
+<span class="token comment" spellcheck="true">/*
+    多行注释
+*/</span>
+
+<span class="token comment" spellcheck="true">/**
+* javadoc注释：这里的注释信息可以自动被javadoc.exe命令解析提取并生成到帮助文档当中。
+*/</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+    1、什么是注释，有什么用？
+        注释是对java源代码的解释说明。
+        注释可以帮程序员更好的理解程序。
+
+    2、注释信息只保存在java源文件当中，java源文件编译生成的字节码class文件，
+    这个class文件中是没有这些注释信息的。
+
+    3、在实际的开发中，一般项目组都要求积极的编写注释。这也是一个java软件工程师
+    的基本素养。
+
+    4、注释不是写的越多越好，精简，主线清晰，每个注释都应该是点睛之笔。
+*/</span>
+
+<span class="token comment" spellcheck="true">// 这种注释属于单行注释，只注释两个斜杠后面的</span>
+
+<span class="token comment" spellcheck="true">/**
+* 类的注释信息
+* @version 1.0
+* @author bjpowernode-dujubin
+* ....
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 这是一个类，类名叫做HelloWorld</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*
+    在这里可以编写多行注释
+    这是一行注释
+    这是第二行注释
+    这是第三行注释
+*/</span></code></pre>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="什么是标识符"><a href="#什么是标识符" class="headerlink" title="什么是标识符?"></a>什么是标识符?</h3><p>凡是程序员自己有权利命名的单词都是标识符。</p>
+<h3 id="标识符可以标识什么？"><a href="#标识符可以标识什么？" class="headerlink" title="标识符可以标识什么？"></a>标识符可以标识什么？</h3><p>​            类名<br>​            方法名<br>​            变量名<br>​            接口名<br>​            常量名<br>​            ……</p>
+<h3 id="标识符命名规则"><a href="#标识符命名规则" class="headerlink" title="标识符命名规则"></a>标识符命名规则</h3><ol>
+<li><p>标识符只能由数字、字母（包括中文）、下划线_、美元符号$组成，不能含有其它符号。</p>
+</li>
+<li><p>标识符不能以数字开头</p>
+</li>
+<li><p>关键字不能做标识符。例如：public class static void 这些蓝色的字体<br>都是关键字，关键字是不能做标识符的。</p>
+</li>
+<li><p>标识符是严格区分大小写的。大写A和小写a不一样。</p>
+</li>
+<li><p>标识符理论上是没有长度限制的。</p>
+</li>
+</ol>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BiaoShiFuTest</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// main是一个方法的名称，属于标识符</span>
+    <span class="token comment" spellcheck="true">// 但是这个标识符不能修改，因为这个main是SUN固定死的。</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//doSome是一个方法名，可以改成其他的名字</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">doSome</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// k是一个变量名</span>
+        <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// nianLing 是一个变量名</span>
+        <span class="token keyword">int</span> nianLing <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">/*
+    编译报错，错误信息是：
+        错误: 需要&lt;标识符>
+        错误原因：编译器检测到class这个单词，那么编译器会从class这个
+        单词后面找类名，而类名是标识符，编译器找了半天没有找到标识符，
+        因为123ABC不是标识符，所以编译器提示的错误信息是：需要&lt;标识符>
+
+        解决办法：
+            将123ABC修改为合法的标识符。
+*/</span>
+<span class="token keyword">class</span> <span class="token class-name">Y123ABC</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 类名是标识符，标识符“中”不能有空格</span>
+<span class="token comment" spellcheck="true">/*
+编译器错误信息是：
+    错误: 需要'{'
+    编译器检测到class，然后找class后面的标识符，编译器找到了一个合法的标识符
+    叫做“Hello”，然后编译器继续往后找“{”，结果没有找到“{”，所以报错了。
+
+    解决办法：
+        办法1：是把World删除
+        办法2：把空格删除
+*/</span>
+<span class="token comment" spellcheck="true">/*
+class Hello World{
+}
+*/</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Hello</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">HelloWorld</span>                   <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">_A</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">_</span>$1Aa你<span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 错误: 需要&lt;标识符></span>
+<span class="token comment" spellcheck="true">// 关键字不能做标识符</span>
+<span class="token comment" spellcheck="true">/*
+class public {
+}
+*/</span>
+<span class="token comment" spellcheck="true">// 这个可以，因为 public1 不是关键字，可以用。</span>
+<span class="token keyword">class</span> <span class="token class-name">public1</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">b</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 虽然java中的标识符严格区分大小写</span>
+<span class="token comment" spellcheck="true">// 但是对于类名来说，如果一个java源文件中同时出现了：A类和a类</span>
+<span class="token comment" spellcheck="true">// 那么谁在前就生成谁。大家以后最好不要让类名“相同”。</span>
+<span class="token comment" spellcheck="true">// 最好类名是不同的。</span>
+<span class="token keyword">class</span> <span class="token class-name">HelloWorld2</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">helloWorld2</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="标识符命名规范"><a href="#标识符命名规范" class="headerlink" title="标识符命名规范"></a>标识符命名规范</h3><p>标识符除了命名规则之外，还有命名规范：</p>
+<h4 id="命名规则和命名规范有什么区别？"><a href="#命名规则和命名规范有什么区别？" class="headerlink" title="命名规则和命名规范有什么区别？"></a>命名规则和命名规范有什么区别？</h4><p>​            命名规则是语法，不遵守就会编译报错。<br>​            命名规范只是说，大家尽量按照统一的规范来进行命名，不符合规范也行，<br>​            代码是可以编译通过的，但是你的代码风格和大家不一样，这个通常也是<br>​            不允许的。</p>
+<p>​        规则类似于：现实世界中的法律。<br>​        规范类似于：现实世界中的道德。</p>
+<p>​        统一按照规范进行的话，代码的可读性很好。<br>​        代码很容易让其它开发人员理解。</p>
+<h4 id="具体的命名规范有哪些？"><a href="#具体的命名规范有哪些？" class="headerlink" title="具体的命名规范有哪些？"></a>具体的命名规范有哪些？</h4><ol>
+<li><p>见名知意（这个标识符在起名的时候，最好一看这个单词就知道啥意思。）</p>
+</li>
+<li><p>遵循驼峰命名方式，什么是驼峰（一高一低，一高一低…）<br>​驼峰有利于单词与单词之间很好的进行分隔<br>​BiaoShiFuTest，这个很好，一眼就能看出来是4个单词。</p>
+</li>
+<li><p>类名、接口名有特殊要求<br>​类名和接口名首字母大写，后面每个单词首字母大写。<br>​StudentTest、UserTest ，这是类名、接口名。</p>
+</li>
+<li><p>变量名、方法名有特殊要求<br>​变量名和方法名首字母小写，后面每个单词首字母大写。<br>​nianLing（NianLing这样就不符合了。）<br>​mingZi（MingZi这样也不符合了。）</p>
+</li>
+<li><p>所有“常量”名：全部大写，并且单词和单词之间采用下划线衔接。<br>​USER_AGE ：用户年龄<br>​MATH_PI：固定不变的常量3.1415926…..</p>
+</li>
+</ol>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IdentifierTest</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> nianLing <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        String mingZi <span class="token operator">=</span> <span class="token string">"zhangsan"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="程序当中的数据"><a href="#程序当中的数据" class="headerlink" title="程序当中的数据"></a>程序当中的数据</h3><p>​    开发软件是为了解决现实世界中的问题。<br>​    而现实世界当中，有很多问题都是使用数据进行描述的。<br>​    所以软件执行过程中最主要就是对数据的处理。</p>
+<p>​    软件在处理数据之前需要能够表示数据，在java代码中<br>​    怎么去表示数据呢？在java中有这样的一个概念：字面量。</p>
+<p>​    <strong>注意：</strong>在java语言中“数据”被称为“字面量”。<br>​    10<br>​    1.23<br>​    true<br>​    false<br>​    ‘a’<br>​    “abc”<br>​    以上这些都是数据，在程序中都被叫做“字面量”。</p>
+<p>​    字面量可以分为很多种类：<br>​        整数型字面量：1 2 3 100 -100 -20 ….<br>​        浮点型字面量：1.3 1.2 3.14…..<br>​        布尔型字面量：true、false没有其它值了，表示真和假,true表示真，false表示假</p>
+<p>​        字符型字面量：’a’、’b’、’中’<br>​        字符串型字面量：”abc”、”a”、”b”、”中国”</p>
+<p>​        其中字符型和字符串型都是描述了现实世界中的文字：<br>​        <strong>注意：</strong><br>​                所有的字符型只能使用单引号括起来。<br>​                所有的字符串型只能使用双引号括起来。<br>​<br>​            字符型一定是单个字符才能成为“字符型”</p>
+<p>​            在语法级别上怎么区分字符型和字符串型？<br>​                主要看是双引号还是单引号。<br>​                单引号的一定是字符型。<br>​                双引号的一定是字符串型。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VarTest01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'中'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"国"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这不属于字符型，因为使用双引号括起来了，所以它是字符串。</span>
+
+​    <span class="token comment" spellcheck="true">// 编译报错。ab是一个串，不是字符型，不能用单引号。</span>
+​    <span class="token comment" spellcheck="true">//System.out.println('ab');</span>
+
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'好'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属于字符型</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"好"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属于字符串型</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//属于整数型吗？不是，是字符串。</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"true"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属于布尔型吗？不是，是字符串。</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"3.14"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 字符串型</span>
+
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 整数型</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 浮点型</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 布尔型</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 布尔型</span>
+
+​    <span class="token comment" spellcheck="true">//分析一下：如果只有字面量，没有变量机制的话，有什么问题？</span>
+​    <span class="token comment" spellcheck="true">// 10 是一个整数型数据，在内存中占有一定的空间（CPU 内存 硬盘）</span>
+​    <span class="token comment" spellcheck="true">// 10 + 20 = 30</span>
+​    <span class="token comment" spellcheck="true">// 在内存中找一块空间存储10，再找一块空间存储20，CPU负责“+”运算，算完</span>
+​    <span class="token comment" spellcheck="true">// 之后的结果是30，那么这个30也会在内存当中找一块临时的空间存储起来。</span>
+​    <span class="token comment" spellcheck="true">// 思考：以下的三个10在内存当中是一块空间，还是三块不同的空间呢？</span>
+​    <span class="token comment" spellcheck="true">// 以下虽然都是10，但是这3个10占用三块不同的内存空间。</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 只有“字面量”机制的话，是远远不够的，因为只有字面量内存是无法重复利用的。</span>
+
+​    <span class="token comment" spellcheck="true">// 定义/声明一个变量，起名i</span>
+​    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+​    <span class="token comment" spellcheck="true">// 以下这5次访问都是访问的同一块内存空间。（这样使用变量之后，内存空间就得到了复用。）</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​    <span class="token comment" spellcheck="true">// 以下程序表示访问的是字符i以及字符串i，以下的这两个i和以上的i变量没有任何关系。</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+​    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"i"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code></pre>
+<h3 id="什么是变量？"><a href="#什么是变量？" class="headerlink" title="什么是变量？"></a>什么是变量？</h3><p>变量其实就是内存当中存储数据的最基本的单元。<br>变量就是一个存储数据的盒子。</p>
+<p>在java语言当中任何数据都是有数据类型的，其中整数型是：int</p>
+<p>当然，在java中除了数据类型int之外，还有其它的类型，例如带小数的：double等。。。</p>
+<blockquote>
+<p> 数据类型有什么用呢？<br>    记住：不同的数据类型，在内存中分配的空间大小不同。<br>    也就是说，Java虚拟机到底给这个数据分配多大的空间，主要还是看这个变量的数据类型。<br>    根据不同的类型，分配不同大小的空间。</p>
+<p>对于int这种整数类型，JVM会自动给int分配4个字节大小的空间。</p>
+<p>1个字节=8个比特位<br>1个比特位就是一个1或0. 注意：比特位是二进制位。<br>int是占用多少个二进制位？1个int占有32个二进制位（bit位）</p>
+<p>int i = 1; 实际上在内存中是这样表示的：<br>    00000000 00000000 00000000 00000001<br>int i = 2;<br>    00000000 00000000 00000000 00000010</p>
+<p>二进制位就是：满2进1位（0 1 10 11 100 101….）<br>十进制位就是：满10进1位（1 2 3 4 5 6 7 8 9 10）</p>
+</blockquote>
+<h3 id="变量三要素"><a href="#变量三要素" class="headerlink" title="变量三要素"></a>变量三要素</h3><p><strong>对于一个变量来说，包括三要素</strong>：</p>
+<ul>
+<li>变量的数据类型</li>
+<li>变量的名字</li>
+<li>变量中保存的值</li>
+</ul>
+<p>​    类型+名字+值</p>
+<p>​    类型决定空间的大小。<br>​    起个名字是为了以后方便访问。<br>​    值是变量保存的数据。</p>
+<p><strong>变量分类</strong></p>
+<p>　变量根据出现的位置进行划分：<br>    在方法体当中声明的变量：局部变量。<br>    在方法体之外，类体内声明的变量：成员变量。</p>
+<p>​    重点依据是：声明的位置。</p>
+<p><strong>注意：</strong>局部变量只在方法体当中有效，方法体执行结束该变量的内存就释放了。</p>
+<p><strong>变量名命名规范</strong><br>        首字母小写，后面每个单词首字母大写，遵循驼峰命名方式，见名知意。</p>
+<p><strong>变量怎么声明/定义的法格式：</strong><br>    数据类型 变量名;<br>    例如：<br>        int nianLing;</p>
+<p>在java语言中有一个规定，变量必须先声明，再赋值才能访问。（没有值相当于这个空间没有开辟。）</p>
+<p>在java语言中怎么给一个变量赋值呢，语法格式是什么？<br>    记住：使用一个运算符，叫做“=”，这个运算符被称为赋值运算符。<br>    赋值运算符“=”的运算特点是：等号右边先执行，执行完之后赋值给左边的变量。</p>
+<p>变量可以声明的时候赋值吗？可以的。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VarTest02</span><span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+    * 这是一个程序的入口
+    * @param args是main方法的参数
+    */</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">// 定义一个int类型的变量，起名nianLing，该变量用来存储人的年龄。</span>
+        <span class="token keyword">int</span> nianLing<span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 变量声明之后，没有手动赋值，可以直接访问吗？</span>
+        <span class="token comment" spellcheck="true">// 编译报错：错误: 可能尚未初始化变量nianLing</span>
+        <span class="token comment" spellcheck="true">//System.out.println(nianLing);</span>
+
+        <span class="token comment" spellcheck="true">// 给变量赋值</span>
+        nianLing <span class="token operator">=</span> <span class="token number">45</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nianLing<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这是访问变量。</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"nianLing"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这是访问字符串。</span>
+
+        <span class="token comment" spellcheck="true">// 变量：可以变化的量。</span>
+        <span class="token comment" spellcheck="true">// 重新赋值</span>
+        nianLing <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nianLing<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 再次重新赋值</span>
+        nianLing <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nianLing<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 体重80kg</span>
+        <span class="token keyword">int</span> tiZhong <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>tiZhong<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3><p>​    <strong>什么是作用域</strong><br>​            变量的有效范围。<br>​    <strong>关于变量的作用域，大家可以记住一句话：</strong><br>​            出了大括号就不认识了。<br>​    <strong>java中有一个很重要的原则：</strong><br>​            就近原则。<br>​            哪个离我近，就访问哪个。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VarTest08</span><span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">// 成员变量</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 局部变量</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这个i的有效范围是main方法。</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这个i是多少？</span>
+
+        <span class="token comment" spellcheck="true">// 同一个域当中，这是不允许的。</span>
+        <span class="token comment" spellcheck="true">//int i = 90;  </span>
+
+        <span class="token comment" spellcheck="true">// 考核一下：以下编写for循环你看不懂，没关系，后面会将。</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> n <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> n<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 这里声明的n变量只属于for域。for结束后n释放没了。</span>
+            <span class="token comment" spellcheck="true">// 这里没有编写代码。</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// for循环执行结束之后，在这里访问n变量可以吗？</span>
+        <span class="token comment" spellcheck="true">//System.out.println(n);  //错误: 找不到符号</span>
+
+        <span class="token keyword">int</span> k<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 属于main域。</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 能否继续访问k呢？</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 这个方法怎么定义先不用管，后面会学习。</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 在这个位置上能访问i吗？</span>
+        <span class="token comment" spellcheck="true">// 错误: 找不到符号</span>
+        <span class="token comment" spellcheck="true">// System.out.println(i); // i是无法访问的。</span>
+
+        <span class="token comment" spellcheck="true">// 可以定义一个变量起名i吗？</span>
+        <span class="token comment" spellcheck="true">// 这个i的有效范围是x方法。</span>
+        <span class="token comment" spellcheck="true">// 局部变量</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 所以这个i和main方法中的i不在同一个域当中。不冲突。</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="关于变量的一些结论："><a href="#关于变量的一些结论：" class="headerlink" title="关于变量的一些结论："></a>关于变量的一些结论：</h3><p>在同一个域当中，变量名不能重名，不能重复声明。<br>变量可以重新赋值，但在同一个域当中，不能重复声明。</p>
+<p>可以一行声明多个变量。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span></code></pre>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数据类型作用"><a href="#数据类型作用" class="headerlink" title="数据类型作用"></a>数据类型作用</h3><p>数据类型用来声明变量，程序在运行过程中根据不同的数据类型分配不同大小的空间。<br>        int i = 10;<br>        double d = 1.23;<br>        i变量和d变量类型不同，空间大小不同。</p>
+<h3 id="数据类型分类"><a href="#数据类型分类" class="headerlink" title="数据类型分类"></a>数据类型分类</h3><p>数据类型在java语言中包括两种：</p>
+<ul>
+<li><p>第一种：基本数据类型</p>
+<p>基本数据类型又可以划分为4大类8小种：</p>
+<pre><code>            第一类：整数型
+                `byte`,`short`,`int`,`long` （没有小数的）
+            第二类：浮点型 
+                `float`,`double` （带有小数的）
+            第三类：布尔型
+                `boolean`：只有两个值`true`和`false`，`true`表示真，`false`表示假
+            第四类：字符型
+                `char`：`java`中规定字符型字面量必须使用单引号括起来。属于文字。</code></pre><p>​        　　8小种：<br>​            　　<code>byte</code>,<code>short</code>,<code>int</code>,<code>long</code><br>​        　　    <code>float</code>,<code>double</code><br>​            　　<code>boolean</code><br>​            　　<code>char</code></p>
+</li>
+<li><p>第二种：引用数据类型</p>
+<p>字符串型String属于引用数据类型。<br>String字符串不属于基本数据类型范畴。<br>java中除了基本数据类型之外，剩下的都是引用数据类型。<br>引用数据类型面向对象时才会接触。</p>
+</li>
+</ul>
+<h3 id="8种基本数据类型区别"><a href="#8种基本数据类型区别" class="headerlink" title="8种基本数据类型区别"></a>8种基本数据类型区别</h3><p>　　整数型：byte short int long有什么区别？<br>        浮点型：float和double有什么区别？<br>        区别：占用的空间大小不同。</p>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">占用字节数量</th>
+<th align="center">取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte</td>
+<td align="center">1</td>
+<td align="center">[-128 ~ 127]</td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center">2</td>
+<td align="center">[-32768 ~ 32767]</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">4</td>
+<td align="center">[-2147483648 ~ 2147483647]</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">8</td>
+<td align="center">[-9223372036854774808~9223372036854774807]</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">4</td>
+<td align="center">[3.402823e+38 ~ 1.401298e-45]</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">8</td>
+<td align="center">[1.797693e+308~ 4.9000000e-324]</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">1</td>
+<td align="center">[\u0000~\uFFFF]</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">2</td>
+<td align="center">[0~65535]</td>
+</tr>
+</tbody></table>
+<h3 id="数据类型详解"><a href="#数据类型详解" class="headerlink" title="数据类型详解"></a>数据类型详解</h3><p>​    字符型：char</p>
+<p>​    整数型：byte，short， int， long</p>
+<pre class=" language-java"><code class="language-java">        <span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token number">127</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 可以直接赋值</span>
+        <span class="token keyword">short</span> s <span class="token operator">=</span> <span class="token number">32767</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 可以直接赋值</span></code></pre>
+<p>浮点型：float double<br>布尔型：boolean</p>
+<h4 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h4><p>整数型在java语言中共4种类型：<br>        byte    1个字节  最大值127<br>        short    2个字节  最大值32767<br>        int    4个字节  2147483647是int最大值，超了这个范围可以使用long类型。<br>        long    8个字节</p>
+<p>​    1个字节 = 8个二进制位<br>​    1byte = 8bit</p>
+<p>​    对于以上的四个类型来说，最常用的是int。<br>​    开发的时候不用斤斤计较，直接选择使用int就行了。</p>
+<p>在java语言中整数型字面量有4种表示形式：<br>    十进制：最常用的。<br>    二进制<br>    八进制<br>    十六进制</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IntTest01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 十进制</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 10</span>
+
+        <span class="token comment" spellcheck="true">// 八进制</span>
+        <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">010</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 8</span>
+
+        <span class="token comment" spellcheck="true">// 十六进制</span>
+        <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0x10</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 16</span>
+
+        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//十进制方式</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 二进制（JDK8的新特性，低版本不支持。）</span>
+        <span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token number">0b10</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在java中有一条非常重要的结论，必须记住：<br>        在任何情况下，整数型的“字面量/数据”默认被当做int类型处理。<br>        如果希望该“整数型字面量”被当做long类型来处理，需要在“字面量”后面添加L/l<br>        建议使用大写L，因为小写l和1傻傻分不清。</p>
+<h3 id="类型转换时需要遵循的规则"><a href="#类型转换时需要遵循的规则" class="headerlink" title="类型转换时需要遵循的规则"></a>类型转换时需要遵循的规则</h3><ol>
+<li><p>八种基本数据类型中，除 boolean 类型不能转换，剩下七种类型之间都可以<br>进行转换；</p>
+</li>
+<li><p>如果整数型字面量没有超出 byte,short,char 的取值范围，可以直接将其赋<br>值给byte,short,char 类型的变量；</p>
+</li>
+<li><p>小容量向大容量转换称为自动类型转换，容量从小到大的排序为：<br>byte &lt; short(char) &lt; int &lt; long &lt; float &lt; double，其中 short和 char<br>都占用两个字节，但是char 可以表示更大的正整数；</p>
+</li>
+<li><p>大容量转换成小容量，称为强制类型转换，编写时必须添加“强制类型转换符”，<br>但运行时可能出现精度损失，谨慎使用；</p>
+</li>
+<li><p>byte,short,char 类型混合运算时，先各自转换成 int 类型再做运算；</p>
+</li>
+<li><p>多种数据类型混合运算，各自先转换成容量最大的那一种再做运算；</p>
+</li>
+</ol>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>+  -  * / % ++ –</p>
+<h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><p>&gt;  &gt;=   &lt;  &lt;=  ==  != </p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>​    &amp;  |  !   &amp;&amp;  ||</p>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>​    =  +=  -=  *=  /=  %=</p>
+<h3 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h3><p>​    布尔表达式 ? 表达式1 : 表达式2</p>
+<h3 id="字符串连接运算符："><a href="#字符串连接运算符：" class="headerlink" title="字符串连接运算符："></a>字符串连接运算符：</h3><p>​    +</p>
+<p>持续更新……</p>
 <hr>
 <p><strong>如果自己不想积极认真地生活，不管得到什么样的回答都没用。——东野圭吾 《解忧杂货店》</strong></p>
 <script>
@@ -1110,12 +1737,12 @@ if (windowWidth > 768) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">开发基础</span>
-                    </a>
-                    
                     <a href="/tags/DOS%E5%91%BD%E4%BB%A4/">
                         <span class="chip bg-color">DOS命令</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">开发基础</span>
                     </a>
                     
                 </div>
@@ -1356,7 +1983,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>|&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.8k</span>&nbsp;字
+                class="white-color">11.7k</span>&nbsp;字
             
             
             
