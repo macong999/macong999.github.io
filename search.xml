@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>字符编码详解</title>
+      <link href="/2020/05/28/zi-fu-bian-ma-xiang-jie/"/>
+      <url>/2020/05/28/zi-fu-bian-ma-xiang-jie/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是字符编码？"><a href="#什么是字符编码？" class="headerlink" title="什么是字符编码？"></a>什么是字符编码？</h2><ul><li>字符编码是人为的定义的一套<strong>转换表</strong>。</li><li>在字符编码中规定了一系列的文字对应的二进制。</li><li>字符编码其实<strong>本质</strong>上就是一本字典，该字段中描述了文字与二进制之间的对照关系。</li><li>字符编码是人为规定的。（是某个计算机协会规定的。）</li></ul><p>​    字符编码涉及到<strong>编码</strong>和<strong>解码</strong>两个过程，编码和解码的时候必须采用同一套字符编码方式，不然就会出现乱码。</p><h2 id="字符编码的发展过程"><a href="#字符编码的发展过程" class="headerlink" title="字符编码的发展过程"></a>字符编码的发展过程</h2><p>​        起初的时候计算机是不支持文字的，只支持科学计算。实际上计算机起初是为了<br>​        战争而开发的：计算导弹的轨道….</p><p>​        后来随着计算机的发展，计算机开始支持文字，最先支持的文字是英文，英文<br>​        对应的字符编码方式是：ASCII码。</p><p>​        <code>ASCII</code>码采用<code>1byte</code>进行存储，因为英文字母是26个。（键盘上所有的键全部算上也<br>​        超不过256个。<code>1byte</code>可以表示256种不同的情况。所以英文本身在计算机方面就占有<br>​        优势。）<br>​            <code>'a'</code> –(采用ASCII码进行编码)-&gt; <code>01100001</code><br>​            01100001 –(采用ASCII码进行解码)-&gt; ‘a’<br>​            <strong><em>如果编码和解码采用的不是同一个编码方式，会出现乱码。</em></strong><br>​            ‘b’ —&gt; 98<br>​            ‘c’ —&gt; 99…<br>​            ‘a’ —&gt; 97</p><p>​            ‘A’ —&gt; 65<br>​            ‘B’ —&gt; 66<br>​            …</p><p>​            ‘0’ —&gt; 48  （这个’0’不是那个0，是文字’0’）<br>​            ‘1’ —&gt; 49<br>​<br>​        随着计算机语言的发展，后来国际标准组织制定了<code>ISO-8859-1</code>编码方式，<br>​        又称为<code>latin-1</code>编码方式，向上兼容<code>ASCII</code>码。但不支持中文。</p><p>​        后来发展到亚洲，才支持中文，日文，韩文….<br>​        中文这块的编码方式：<code>GB2312&lt;GBK&lt;GB18030</code> （容量的关系）<br>​        以上编码方式是简体中文。</p><p>​        繁体中文：<code>big5</code>（台湾使用的是大五码。）</p><p>​        在java中，java语言为了支持全球所有的文字，采用了一种字符编码方式<br>​        叫做<code>unicode</code>编码。<code>unicode</code>编码统一了全球所有的文字，支持所有文字。<br>​        具体的实现包括：<code>UTF-8</code> <code>UTF-16</code> <code>UTF-32</code>….<br>​<br>​    需要记住：<br>​        </p><pre class=" language-markdown"><code class="language-markdown">ASCII（'a'是97 'A'是65 '0'是48...）ISO-8859-1（latin-1）GB2312GBKGB18030Big5unicode（utf8 utf16 utf32）</code></pre><hr><p><strong>我们终其一生，就是要摆脱他人的期待，找到真正的自己。——无声告白</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 字符编码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++基础</title>
       <link href="/2020/05/20/c-ji-chu/"/>
       <url>/2020/05/20/c-ji-chu/</url>
@@ -20,11 +47,11 @@
       
         <tags>
             
-            <tag> C++ </tag>
+            <tag> 后端 </tag>
             
             <tag> 基础 </tag>
             
-            <tag> 后端 </tag>
+            <tag> C++ </tag>
             
         </tags>
       
@@ -49,9 +76,9 @@
       
         <tags>
             
-            <tag> 开发基础 </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> 开发基础 </tag>
             
         </tags>
       
@@ -76,9 +103,9 @@
       
         <tags>
             
-            <tag> DOS命令 </tag>
-            
             <tag> 开发基础 </tag>
+            
+            <tag> DOS命令 </tag>
             
         </tags>
       
@@ -103,9 +130,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> 后端 </tag>
             
             <tag> Java </tag>
             

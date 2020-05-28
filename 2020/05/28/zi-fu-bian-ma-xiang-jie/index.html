@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="不蒜子和live2d看板娘冲突问题, 肆月拾柒">
+    <meta name="keywords" content="字符编码详解, 肆月拾柒">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>不蒜子和live2d看板娘冲突问题 | 肆月拾柒</title>
+    <title>字符编码详解 | 肆月拾柒</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -347,12 +347,12 @@ if (windowWidth > 768) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">不蒜子和live2d看板娘冲突问题</h1>
+                    <h1 class="description center-align post-title">字符编码详解</h1>
                 </div>
             </div>
         </div>
@@ -477,12 +477,12 @@ if (windowWidth > 768) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">基础</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2-%E5%89%8D%E7%AB%AF/">
-                                <span class="chip bg-color">博客 - 前端</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+                                <span class="chip bg-color">字符编码</span>
                             </a>
                         
                     </div>
@@ -493,8 +493,8 @@ if (windowWidth > 768) {
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-category">
-                                解决方案
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
+                                基础
                             </a>
                         
                     </div>
@@ -506,7 +506,7 @@ if (windowWidth > 768) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-19
+                    2020-05-28
                 </div>
                 
 
@@ -520,14 +520,14 @@ if (windowWidth > 768) {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    653
+                    664
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -542,18 +542,30 @@ if (windowWidth > 768) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在搭建完博客之后发现不蒜子计数失效，网站底部的访问人数和数量以及文章中的阅读人数均不显示，反复刷新后会短暂显示。</p>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>百度之后原因是不蒜子官网域名更改的问题，可是我翻了源码之后发现域名是最新的，因此排除此错误。</p>
-<p>后来仔细阅读了源码，发现不蒜子的启动方式是一个判断语句:</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>busuanziStatistics <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>busuanziStatistics<span class="token punctuation">.</span>totalTraffic<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span></code></pre>
-<p>并且当主题配置文件中的enable更改为false时反而能显示出来文字，仔细回忆失效时间似乎是搭建过程中才失效的，应该是和某些插件冲突。于是我查找了资料发现有不蒜子和</p>
-<p>live2d冲突的帖子。终于找到了原因所在。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>首先是将不蒜子的js插件保存到本地，基本上都是<code>busuanzi.pure.mini.js</code>这个文件。如果使用的是来自外网的js文件，也请下载到本地。</p>
-<p>将文件更改如下：</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> bszCaller<span class="token punctuation">,</span>bszTag<span class="token punctuation">;</span><span class="token operator">!</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>e<span class="token punctuation">,</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>ready<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> a<span class="token operator">||</span><span class="token string">"interactive"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">||</span><span class="token string">"complete"</span><span class="token operator">===</span>document<span class="token punctuation">.</span>readyState<span class="token operator">?</span>c<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">:</span>b<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> c<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">}</span><span class="token punctuation">,</span>d<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> a<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>c<span class="token operator">=</span>b<span class="token punctuation">.</span>length<span class="token punctuation">;</span>c<span class="token operator">></span>a<span class="token punctuation">;</span>a<span class="token operator">++</span><span class="token punctuation">)</span>b<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>e<span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>a<span class="token operator">||</span><span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span>d<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>removeEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">detachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span>e<span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span><span class="token function">clearInterval</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>document<span class="token punctuation">.</span>addEventListener<span class="token operator">?</span>document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span>e<span class="token punctuation">,</span><span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>document<span class="token punctuation">.</span>attachEvent<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"onreadystatechange"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token regex">/loaded|complete/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>readyState<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>window<span class="token operator">==</span>window<span class="token punctuation">.</span>top<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span>a<span class="token operator">||</span>document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span><span class="token function">doScroll</span><span class="token punctuation">(</span><span class="token string">"left"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszCaller<span class="token operator">=</span><span class="token punctuation">{</span>fetch<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span><span class="token string">"BusuanziCallback_"</span><span class="token operator">+</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">1099511627776</span><span class="token operator">*</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>window<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">evalCall</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token string">"="</span><span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"SCRIPT"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>defer<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>src<span class="token operator">=</span>a<span class="token punctuation">,</span>document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"HEAD"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>evalCall<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">try</span><span class="token punctuation">{</span><span class="token function">a</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">,</span>scriptTag<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>scriptTag<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">hides</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>bszCaller<span class="token punctuation">.</span><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback"</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>bszTag<span class="token punctuation">.</span><span class="token function">texts</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token punctuation">.</span><span class="token function">shows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>bszTag<span class="token operator">=</span><span class="token punctuation">{</span>bszs<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"site_pv"</span><span class="token punctuation">,</span><span class="token string">"page_pv"</span><span class="token punctuation">,</span><span class="token string">"site_uv"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>texts<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> c<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_value_"</span><span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>c<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span>a<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>hides<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>shows<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>bszs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> b<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"busuanzi_container_"</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>b<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">"inline"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>操作其实就是把其中的<code>b.style.display="none"</code>中<code>none</code>去掉。然后在clean一下，再部署发布即可。</p>
+                <h2 id="什么是字符编码？"><a href="#什么是字符编码？" class="headerlink" title="什么是字符编码？"></a>什么是字符编码？</h2><ul>
+<li>字符编码是人为的定义的一套<strong>转换表</strong>。</li>
+<li>在字符编码中规定了一系列的文字对应的二进制。</li>
+<li>字符编码其实<strong>本质</strong>上就是一本字典，该字段中描述了文字与二进制之间的对照关系。</li>
+<li>字符编码是人为规定的。（是某个计算机协会规定的。）</li>
+</ul>
+<p>​    字符编码涉及到<strong>编码</strong>和<strong>解码</strong>两个过程，编码和解码的时候必须采用同一套字符编码方式，不然就会出现乱码。</p>
+<h2 id="字符编码的发展过程"><a href="#字符编码的发展过程" class="headerlink" title="字符编码的发展过程"></a>字符编码的发展过程</h2><p>​        起初的时候计算机是不支持文字的，只支持科学计算。实际上计算机起初是为了<br>​        战争而开发的：计算导弹的轨道….</p>
+<p>​        后来随着计算机的发展，计算机开始支持文字，最先支持的文字是英文，英文<br>​        对应的字符编码方式是：ASCII码。</p>
+<p>​        <code>ASCII</code>码采用<code>1byte</code>进行存储，因为英文字母是26个。（键盘上所有的键全部算上也<br>​        超不过256个。<code>1byte</code>可以表示256种不同的情况。所以英文本身在计算机方面就占有<br>​        优势。）<br>​            <code>'a'</code> –(采用ASCII码进行编码)-&gt; <code>01100001</code><br>​            01100001 –(采用ASCII码进行解码)-&gt; ‘a’<br>​            <strong><em>如果编码和解码采用的不是同一个编码方式，会出现乱码。</em></strong><br>​            ‘b’ —&gt; 98<br>​            ‘c’ —&gt; 99…<br>​            ‘a’ —&gt; 97</p>
+<p>​            ‘A’ —&gt; 65<br>​            ‘B’ —&gt; 66<br>​            …</p>
+<p>​            ‘0’ —&gt; 48  （这个’0’不是那个0，是文字’0’）<br>​            ‘1’ —&gt; 49<br>​<br>​        随着计算机语言的发展，后来国际标准组织制定了<code>ISO-8859-1</code>编码方式，<br>​        又称为<code>latin-1</code>编码方式，向上兼容<code>ASCII</code>码。但不支持中文。</p>
+<p>​        后来发展到亚洲，才支持中文，日文，韩文….<br>​        中文这块的编码方式：<code>GB2312&lt;GBK&lt;GB18030</code> （容量的关系）<br>​        以上编码方式是简体中文。</p>
+<p>​        繁体中文：<code>big5</code>（台湾使用的是大五码。）</p>
+<p>​        在java中，java语言为了支持全球所有的文字，采用了一种字符编码方式<br>​        叫做<code>unicode</code>编码。<code>unicode</code>编码统一了全球所有的文字，支持所有文字。<br>​        具体的实现包括：<code>UTF-8</code> <code>UTF-16</code> <code>UTF-32</code>….<br>​<br>​    需要记住：<br>​        </p>
+<pre class=" language-markdown"><code class="language-markdown">ASCII（'a'是97 'A'是65 '0'是48...）
+ISO-8859-1（latin-1）
+GB2312
+GBK
+GB18030
+Big5
+unicode（utf8 utf16 utf32）</code></pre>
 <hr>
-<p><strong>不赶什么浪潮，也不搭什么船，我自己有海。—— 陈粒</strong></p>
+<p><strong>我们终其一生，就是要摆脱他人的期待，找到真正的自己。——无声告白</strong></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -597,7 +609,7 @@ if (windowWidth > 768) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://macong666.gitee.io/2020/05/19/bu-suan-zi-he-live2d-kan-ban-niang-chong-tu-wen-ti/">https://macong666.gitee.io/2020/05/19/bu-suan-zi-he-live2d-kan-ban-niang-chong-tu-wen-ti/</a>
+                    <a href="https://macong666.gitee.io/2020/05/28/zi-fu-bian-ma-xiang-jie/">https://macong666.gitee.io/2020/05/28/zi-fu-bian-ma-xiang-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -635,12 +647,12 @@ if (windowWidth > 768) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">基础</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2-%E5%89%8D%E7%AB%AF/">
-                                    <span class="chip bg-color">博客 - 前端</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+                                    <span class="chip bg-color">字符编码</span>
                                 </a>
                             
                         </div>
@@ -1073,54 +1085,52 @@ if (windowWidth > 768) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/19/java-xue-xi-bi-ji/">
+                <a href="/2020/05/28/zi-fu-bian-ma-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/themes/matery/source/medias/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="Java学习笔记">
+                        <img src="/themes/matery/source/medias/loading.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="字符编码详解">
                         
-                        <span class="card-title">Java学习笔记</span>
+                        <span class="card-title">字符编码详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            根据Java学习路线整理笔记(每周一更)
+                            详解在开发中常遇到的字符编码
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    基础
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+                        <span class="chip bg-color">字符编码</span>
                     </a>
                     
                 </div>
@@ -1134,31 +1144,31 @@ if (windowWidth > 768) {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/18/xian-liao/">
+                <a href="/2020/05/20/c-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/themes/matery/source/medias/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="闲聊">
+                        <img src="/themes/matery/source/medias/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="C++基础">
                         
-                        <span class="card-title">闲聊</span>
+                        <span class="card-title">C++基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次搭建了个人博客，期待您的关注！
+                            C++学习笔记，基础阶段
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    日常
+                            <a href="/categories/C/" class="post-category">
+                                    C++
                                 </a>
                             
                             
@@ -1168,12 +1178,16 @@ if (windowWidth > 768) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%8B%E8%AF%95/">
-                        <span class="chip bg-color">测试</span>
+                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
                     </a>
                     
-                    <a href="/tags/%E9%97%B2%E8%81%8A/">
-                        <span class="chip bg-color">闲聊</span>
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
+                    </a>
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
                     </a>
                     
                 </div>
